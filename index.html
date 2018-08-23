@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script src="js/cache.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/util.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			(function($,doc){
+				$.init({
+					statusBarBackground: '#f7f7f7'
+				});
+				
+				console.log('================>qiyun start<==================')
+				var userInfo = cache.getUserInfo();
+				var autoLogin = cache.getAutoLogin();
+				
+				$.plusReady(function(){
+					var mainPage = plus.webview.getWebviewById("main");
+					var main_loaded_flag = false;
+					if(!mainPage){
+						mainPage = $.preload({
+							id: 'main',
+							url: 'html/main.html',
+						});
+					}else{
+						main_loaded_flag = true;
+					}
+					mainPage.addEventListener("loaded",function () {
+						main_loaded_flag = true;
+					});
+					
+					let deviceInfo = plus.device;
+					cache.setDeviceInfo(deviceInfo);
+					
+					let networkInfo = plus.networkinfo.getCurrentType();
+					if(networkInfo == plus.networkinfo.CONNECTION_UNKNOW || networkInfo == plus.networkinfo.CONNECTION_NONE){
+						plus.nativeUI.toast('请检查设备的网络连接',{duration:"long"})
+					}
+				})
+				
+				var startCount = setTimeout(function(){
+					if(!util.isEmpty(userInfo) && autoLogin){
+						//自动登录
+						console.log("==================>进入主页面<===============")
+						if(main_loaded_flag){
+							$.fire(mainPage, 'show', null);
+							mainPage.show("pop-in");
+						}
+						
+					}else{
+						console.log('=================>进入登录页面<=================')
+						mui.openWindow(
+							{
+								id:"login",
+								url:"html/login/login.html",
+								show:{
+									aniShow: 'pop-in'
+								},
+								waiting: {
+									autoShow: false
+								}
+							}
+						)
+					}
+				},3000)
+				
+			}(mui,document))
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+			  pullRefresh : {
+			    container:"#refreshContainer",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+			    down : {
+			      height:50,
+			      auto: false,
+			      contentdown : "下拉获取新通知",
+			      contentover : "释放立即获取",
+			      contentrefresh : "正在获取新通知...",
+			      callback :updateInform
+			    }
+			  }
+			})
+			
+			function updateInform(){
+				let informList = document.getElementById('informList');
+				let target;
+				let targetList = [1,2,3,4,5,6,7];
+				
+				for(let item of targetList){
+					target = document.createElement('li');
+					target.className='mui-table-view-cell';
+					target.innerHTML = 'item'+item;
+					informList.appendChild(target);
+				}
+				
+				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			}
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">通知</h1>
+		</header>
+		<!--下拉刷新容器-->
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+		  <div class="mui-scroll">
+		  	<div class="mui-row">
+		  		<div class="mui-col-sm-12">
+	  			请尝试下拉刷新	
+	  		</div>
+			</div>
+		    <!--数据列表-->
+		    
+		    <ul id='informList' class="mui-table-view mui-table-view-chevron">
+		      
+		    </ul>
+		  </div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "index.html": {
+    "refer": [
+      "html/main.html",
+      "html/login/login.html"
+    ]
+  },
+  "html/main.html": {
+    "resources": [
+      "html/homepage/homepage.html"
+    ],
+    "refer": [
+      "html/ART/artHomepage.html",
+      "html/homepage/homepage.html",
+      "html/inform/inform.html",
+      "html/user/userinfo.html"
+    ]
+  }
+}
