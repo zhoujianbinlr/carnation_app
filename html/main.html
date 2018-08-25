@@ -3,11 +3,12 @@
 
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit:contain" />
 		<title></title>
 		<link href="../css/mui.min.css" rel="stylesheet" />
 
 		<style>
+			
 			ul {
 				font-size: 14px;
 				color: #8f8f94;
@@ -15,10 +16,11 @@
 			.mui-btn {
 				padding: 10px;
 			}
+			
 		</style>
 	</head>
 	<body>
-		<nav class="mui-bar mui-bar-tab">
+		<nav id='nav' class="mui-bar mui-bar-tab">
 		    <a id="homepage" class="mui-tab-item mui-active">
 		        <span class="mui-icon mui-icon-home"></span>
 		        <span class="mui-tab-label">首页</span>
@@ -40,10 +42,16 @@
 		</div>
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/app.js"></script>
+		<script src="../js/cache.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			(function($, doc) {
-				let subpages = app.getSubPages();
+				let subpages= app.getSubPages();
 				$.init();
+				let screenInfo = cache.getScreenInfo();
+				if(screenInfo.height == 812 & screenInfo.width == 375){
+					//如果是iphoneX设备则对导航栏设置底部margin
+					document.getElementById('nav').setAttribute('style','margin-bottom: 34px;')
+				}
 				$.plusReady(function() {
 					//子页面加载
 					var aniShow = {};
@@ -60,6 +68,7 @@
 				        }
 				        self.append(sub);
 				    }
+				    
 				    mui('.mui-bar-tab').on('tap', 'a', function(e) {
 				        var targetTab = this.getAttribute('id');
 				        if (targetTab == activeTab) {

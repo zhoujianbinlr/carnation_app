@@ -3,7 +3,8 @@
  **/
 const ROOT = 'http://116.62.40.165:8090/Tubebaby/api/v1/';
 
-(function($, owner) {
+(function($, doc,owner) {
+	
 	owner.URL = {
 		"LOGIN":"newUser/login"
 	}
@@ -11,7 +12,7 @@ const ROOT = 'http://116.62.40.165:8090/Tubebaby/api/v1/';
 	owner.Post = function(url,param,callback,errorHandler){
 		callback = callback || $.noop;;
 		let rootURl = ROOT+url;
-		let userInfo = JSON.parse(localStorage.getItem('userInfo'));
+		let userInfo = cache.getUserInfo();
 		if(typeof userInfo == 'object' && userInfo!= null && userInfo != undefined){
 			param.userID =  userInfo.userID
 		}
@@ -58,12 +59,19 @@ const ROOT = 'http://116.62.40.165:8090/Tubebaby/api/v1/';
 		if(path == undefined || path == null){
 			path = '';
 		}
+		let screenInfo = cache.getScreenInfo();
+		let bottom;
+		if(screenInfo.height == 812 && screenInfo.width == 375){
+			bottom = '82px'; 	//	iphoneX需要额外加上34PX的圆角边距 
+		}else{
+			bottom = '48px';	//底部导航栏高度
+		}
 		return [{
 		      url:path+'homepage/homepage.html',//子页面HTML地址，支持本地地址和网络地址
 		      id:'homepage',//子页面标志
 		      styles:{
 		        top:'0px',//子页面顶部位置
-		        bottom:'48px',//子页面底部位置
+		        bottom:bottom//子页面底部位置
 		      },
 		      extras:{}//额外扩展参数
 		    },{
@@ -71,7 +79,7 @@ const ROOT = 'http://116.62.40.165:8090/Tubebaby/api/v1/';
 		      id:'art',//子页面标志
 		      styles:{
 		        top:'0px',//子页面顶部位置
-		        bottom:'48px',//子页面底部位置
+		        bottom:bottom//子页面底部位置
 		      },
 		      extras:{}//额外扩展参数
 		    },{
@@ -79,7 +87,7 @@ const ROOT = 'http://116.62.40.165:8090/Tubebaby/api/v1/';
 		      id:'inform',//子页面标志
 		      styles:{
 		        top:'0px',//子页面顶部位置
-		        bottom:'48px',//子页面底部位置
+		        bottom:bottom//子页面底部位置
 		      },
 		      extras:{}//额外扩展参数
 		    },{
@@ -87,9 +95,9 @@ const ROOT = 'http://116.62.40.165:8090/Tubebaby/api/v1/';
 		      id:'userinfo',//子页面标志
 		      styles:{
 		        top:'0px',//子页面顶部位置
-		        bottom:'48px',//子页面底部位置
+		        bottom:bottom//子页面底部位置
 		      },
 		      extras:{}//额外扩展参数
 		    }];
 	}
-}(mui,window.app = {}));
+}(mui,document,window.app = {}));

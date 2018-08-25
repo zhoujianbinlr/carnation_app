@@ -9,6 +9,7 @@
 	</head>
 
 	<body>
+		<img src="images/qq.png"/>
 		<script src="js/mui.min.js"></script>
 		<script src="js/cache.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/util.js" type="text/javascript" charset="utf-8"></script>
@@ -39,8 +40,21 @@
 						main_loaded_flag = true;
 					});
 					
-					let deviceInfo = plus.device;
-					cache.setDeviceInfo(deviceInfo);
+					if(util.isEmpty(cache.getScreenInfo())){
+						let param = {
+							height:plus.screen.resolutionHeight,
+							width:plus.screen.resolutionWidth
+						};
+						cache.setScreenInfo(param);
+					}
+					
+					if(util.isEmpty(cache.getDeviceInfo())){
+						let deviceInfo = plus.device;
+						cache.setDeviceInfo(deviceInfo);	
+					}
+					
+					
+					
 					
 					let networkInfo = plus.networkinfo.getCurrentType();
 					if(networkInfo == plus.networkinfo.CONNECTION_UNKNOW || networkInfo == plus.networkinfo.CONNECTION_NONE){

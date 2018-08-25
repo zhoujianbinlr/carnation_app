@@ -10,6 +10,12 @@
 
 	<body>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../libs/template-web.js" type="text/javascript" charset="utf-8"></script>
+		<script id="template" type="text/html">
+			<% for(let item of list) {%>
+				<li class='mui-table-view-cell'><%= 'item'+item%></li>
+			<%}%>
+		</script>
 		<script type="text/javascript">
 			mui.init({
 			  pullRefresh : {
@@ -24,18 +30,17 @@
 			    }
 			  }
 			})
-			
+			var count = 0;
+			var targetList = [];
 			function updateInform(){
 				let informList = document.getElementById('informList');
-				let target;
-				let targetList = [1,2,3,4,5,6,7];
-				
-				for(let item of targetList){
-					target = document.createElement('li');
-					target.className='mui-table-view-cell';
-					target.innerHTML = 'item'+item;
-					informList.appendChild(target);
-				}
+				targetList.push(count);
+				count++;
+				let data = {
+					list:targetList
+				};
+				let result = template('template',data);
+				informList.innerHTML = result;
 				
 				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
 			}
