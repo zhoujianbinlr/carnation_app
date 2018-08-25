@@ -12,6 +12,12 @@
 		return JSON.parse(deviceInfo);
 	}
 	
+	//获取设备屏幕信息
+	owner.getScreenInfo = function(){
+		let screenInfo = localStorage.getItem('screenInfo') || "{}";
+		return JSON.parse(screenInfo)
+	}
+	
 	//	获取登录状态
 	owner.getUserInfo = function(){
 		var userInfo = localStorage.getItem('userInfo') || "{}";
@@ -43,6 +49,12 @@
 	owner.setDeviceInfo = function(deviceInfo){
 		deviceInfo = JSON.stringify(deviceInfo);
 		localStorage.setItem('deviceInfo',deviceInfo);
+	}
+	
+	//设置设备屏幕信息
+	owner.setScreenInfo = function(screenInfo){
+		screenInfo = JSON.stringify(screenInfo);
+		localStorage.setItem('screenInfo',screenInfo);
 	}
 	
 }(mui,window.cache = {}))
