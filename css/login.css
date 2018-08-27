@@ -1,0 +1,40 @@
+#login,#next,#confirm {
+	background-color: #ef4870;
+	border: none;
+	font-size: 3vh;
+	width: 100%;
+	padding: 1vh;
+	border-radius: 6vh;
+	box-shadow: 0 0 5px  #ef4870;
+}
+
+#code {
+	background-color: white;
+	color:#ef4870;
+	border: 1px solid #ef4870;
+	font-size: 0.7em;
+	width: 100%;
+	float: left;
+	border-radius: 0.2vh;
+	margin-top: 1vh;
+	padding:0px 2vw !important;
+	line-height: 4vh;
+	height: 4vh;
+}
+
+.mui-input-group {
+	margin-top: 10px;
+	border: none;
+}
+
+.mui-content-padded {
+	margin-top: 10vh;
+}
+
+.mui-input{
+	border: none !important;
+	font-size: 1em;
+	padding: 0 2vw !important;
+	height: 5vh !important;
+	margin: 0px !important;
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="ui-page-login">
-
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
@@ -8,65 +7,22 @@
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link href="../../css/style.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css"/>
-		<style>
-			.mui-content{
-				background-color: white;
-			}
-			
-			#next {
-				background-color: #e7465c;
-				border: none;
-				font-size: 3vh;
-				width: 100%;
-				padding: 1vh;
-				border-radius: 6vh;
-			}
-			
-			#code {
-				background-color: #e7465c;
-				border: none;
-				font-size: 0.6em;
-				width: 100%;
-				float: left;
-				border-radius: 6vh;
-				margin-top: 1vh;
-				padding-top:0px !important;
-				padding-bottom: 0px !important;
-				line-height: 4vh;
-				height: 4vh;
-			}
-			
-			.mui-input-group {
-				margin-top: 10px;
-				border: none;
-			}
-
-			.mui-content-padded {
-				margin-top: 10vh;
-			}
-			
-			.mui-input{
-				border: none !important;
-				font-size: 1em;
-				padding: 0 2vw !important;
-				height: 5vh !important;
-				margin: 0px !important;
-			}
-			
-			
-		</style>
+		<link rel="stylesheet" type="text/css" href="../../css/login.css"/>
 	</head>
-
 	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 id='headerTitle' class="mui-title">注册</h1>
+		</header>
 		<div class="mui-content" style="padding:15vh 10vw 0 10vw">
 			<div class="mui-row" style="text-align: center;">
 				<img width="25%" height="25%" src="../../images/资源 1@2x.png"/>
 			</div>
 		
 			<div class="mui-row" style="margin-top: 15vh;border-bottom: 1px solid #EEEEEE;">
-				<div class="mui-col-xs-3 mui-col-sm-3">
+				<div class="mui-col-xs-1 mui-col-sm-1">
 					<div class="mui-row" style="color:#999999;float: left;height: 6vh;line-height: 6vh;">
-						<span style="float: left;font-size: 1em;"><i style="float: left;font-size: 1em;margin-right: 1vw;" class="iconfont icon-people"></i>+86</span>	
+						<i style="float: left;font-size: 1em;margin-right: 1vw;" class="iconfont icon-people"></i>	
 					</div>
 				</div>
 				<div class="mui-col-xs-7 mui-col-sm-7">
@@ -74,25 +30,32 @@
 						<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请填写手机号">
 					</div>
 				</div>
-				<div class="mui-col-sm-2 mui-col-xs-2">
-					
-				</div>
-				
 			</div>
 			<div class="mui-row" style="margin-top: 2vh;">
-				<div class="mui-col-xs-3 mui-col-sm-3" style="border-bottom: 1px solid #EEEEEE;">
+				<div class="mui-col-xs-1 mui-col-sm-1" style="border-bottom: 1px solid #EEEEEE;">
 					<div class="mui-row" style="color:#999999;float: left;height: 6vh;line-height: 6vh;">
 						<i style="float: left;font-size: 1em;margin-right: 1vw;" class="iconfont icon-lock"></i>	
 					</div>
 				</div>
-				<div class="mui-col-xs-5 mui-col-sm-5" style="border-bottom: 1px solid #EEEEEE;">
+				<div class="mui-col-xs-6 mui-col-sm-6" style="border-bottom: 1px solid #EEEEEE;">
 					<div class="mui-row" style="color:#999999;float: left;height: 6vh;line-height: 6vh;">
 						<input id='password' type='text' class="mui-input-clear mui-input" placeholder="请输入验证码">
 					</div>
 				</div>
-				<div class="mui-col-xs-4 mui-col-sm-4">
+				<div class="mui-col-xs-5 mui-col-sm-5">
 					<div class="mui-row" style="float: right;height: 6vh;line-height: 6vh;">
 						<button id='code' type="button" class="mui-btn mui-btn-blue">获取验证码</button>
+					</div>
+				</div>
+			</div>
+			<div style="margin-top: 5vh;">
+				<div class="mui-row">
+					<div class="mui-col-sm-1 mui-col-xs-1">
+					</div>
+					<div class="mui-col-sm-10 mui-col-xs-10">
+						<div id='back' class="mui-row" style="text-align: center;font-size:0.8em;color: #ef4870;">
+							返回登录
+						</div>
 					</div>
 				</div>
 			</div>
@@ -106,10 +69,6 @@
 						</div>
 					</div>
 				</div>
-				<div id='back' class="mui-row" style="text-align: center;color: #999999;margin-top: 20px;">
-					返回登录
-				</div>
-				
 			</div>
 		</div>
 		<script src="../../js/mui.min.js"></script>
