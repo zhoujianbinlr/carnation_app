@@ -7,5 +7,5 @@ window.onresize=function(){
             plus.webview.currentWebview().setStyle({
                 height:originalHeight
             });
-      }
+     }
 }
