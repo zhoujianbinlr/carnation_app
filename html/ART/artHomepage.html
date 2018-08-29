@@ -1,24 +1,48 @@
 <!doctype html>
-<html>
-
+<html class="ui-page-login">
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../libs/mySlider/mySlider.css"/>
 	</head>
 
 	<body>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../libs/mySlider/mySlider.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			mui.init()
 		</script>
 		<header class="mui-bar mui-bar-nav">
 		    <h1 class="mui-title">我的历程</h1>
 		</header>
-		<div class="mui-content">
-		    我的历程主页
+		<div class="mui-content" style="padding-left: 5vw;padding-right: 5vw;">
+		    <div class="mySlider-container">
+		    		<div id='mysliderImg0'  class="mySlider-img-pre">
+	    				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535448821646&di=4e86e23d8db705ace5e11a89104aa90a&imgtype=0&src=http%3A%2F%2Fp8.qhimg.com%2Ft0126f94687b6ff86d1.jpg"/>
+		    		</div>
+		    		<div id='mysliderImg1'  class="mySlider-img-active">
+		    			<img  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535448821642&di=3d1398ec705c8fe04662a2f313b7bc8e&imgtype=0&src=http%3A%2F%2Fimg.bimg.126.net%2Fphoto%2FbPGVnXMwfFYjhZWSNXm5tA%3D%3D%2F3101572768375225881.jpg"/>
+		    		</div>
+		    		<div id='mysliderImg2'  class="mySlider-img-next">
+	    				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535448821643&di=302e04747a436799c7a20f1dadd099ef&imgtype=0&src=http%3A%2F%2Fwww.lufuli.com%2Fwp-content%2Fuploads%2F2014%2F09%2Fu13533734843559489109fm23gp0.jpg"/>
+		    		</div>
+		    		<div id='mysliderImg3'  class="mySlider-img">
+		    			<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535448821643&di=e981d8f1954715197f03b12d85597217&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fbaike%2Fpic%2Fitem%2Fe6508eef314588d9ce1b3e9e.jpg"/>
+		    		</div>
+		    </div>
 		</div>
+		<script type="text/javascript">
+			let data = [
+				'http://img1.gamersky.com/image2016/02/20160222_gxh_289_9/image096_S.jpg',
+				'http://img1.gamersky.com/image2016/02/20160222_gxh_289_9/image001_S.jpg',
+				'http://upload.anqu.com/20160226/1456468514740519.jpg',
+				'http://img1.gamersky.com/image2016/02/20160222_gxh_289_9/image006_S.jpg'
+				];
+			mySlider.initSlider(data)
+		</script>
 	</body>
 
 </html>
