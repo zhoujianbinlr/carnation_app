@@ -86,6 +86,7 @@
 					statusBarBackground: '#f7f7f7'
 				});
 				$.plusReady(function() {
+					console.log("当前页面URL："+plus.webview.currentWebview().getURL());
 					plus.screen.lockOrientation("portrait-primary");
 					var mainPage = plus.webview.getWebviewById("main");
 					var main_loaded_flag = false;
@@ -135,6 +136,7 @@
 					var passwordLoginButton = doc.getElementById('passwordLogin');
 					
 					loginButton.addEventListener('tap', function(event) {
+						console.log("111");
 						let accountReg = /^1(\d{10})$/;
 						let passwordReg = /^\w{6,18}$/;
 						if(!accountReg.test(accountBox.value)){
