@@ -3,7 +3,8 @@
     "refer": [
       "html/main.html",
       "html/login/login.html"
-    ]
+    ],
+    "resources": []
   },
   "html/main.html": {
     "resources": [
@@ -14,6 +15,34 @@
       "html/homepage/homepage.html",
       "html/inform/inform.html",
       "html/user/userinfo.html"
+    ]
+  },
+  "html/login/login.html": {
+    "resources": [
+      "images/Dı 1@2x.png",
+      "images/Dı 1@2x.png",
+      "images/D 1@2x.png"
+    ],
+    "refer": [
+      "html/login/reg.html",
+      "html/login/loginByPassword.html"
+    ]
+  },
+  "html/login/reg.html": {
+    "resources": [
+      "images/Dı 1@2x.png",
+      "images/Dı 1@2x.png",
+      "images/D 1@2x.png"
+    ],
+    "refer": []
+  },
+  "html/login/loginByPassword.html": {
+    "resources": [
+      "images/Dı 1@2x.png",
+      "images/Dı 1@2x.png"
+    ],
+    "refer": [
+      "html/login/reg.html"
     ]
   }
 }
