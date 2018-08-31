@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css"/>
 		<style>
 			.custom-userinfo-top{
 				/*margin-top: 35px; */height: 163pt; background-color: #E7465C; border-radius: 3pt; color: white;text-align: center;
@@ -33,6 +34,32 @@
 			.mui-table-view-cell:after{
 				left: 0px;
 			}
+			/*红色*/
+			.icon-color-e7465c{
+				color: #e7465c;
+			}
+			/*蓝色*/
+			.icon-color-2c80e5{
+				color: #2c80e5;
+			}
+			/*蓝绿*/
+			.icon-color-07a098{
+				color: #07a098;
+			}
+			/*绿色*/
+			.icon-color-82d842{
+				color: #82d842;
+			}
+			/*黄色*/
+			.icon-color-ffc32d{
+				color: #ffc32d;
+			}
+			.font-size24{
+				font-size: 24px;
+			}
+			.font-size15{
+				font-size: 15px;
+			}
 		</style>
 	</head>
 
@@ -47,26 +74,29 @@
 				<div class="imgDiv">
 					<img src="../../images/qq.png" />
 				</div>
-				<div class="mui-row mui-pull-right editDiv">编辑</div>
+				<div class="mui-row mui-pull-right editDiv">
+					编辑
+					<!--<span class="mui-icon iconfont icon-edit"></span>-->
+				</div>
 				<div class="mui-content-padded">
-					<span>昵称</span>&nbsp;<span class="mui-icon mui-icon-chatbubble"></span><br />
+					<span>昵称</span>&nbsp;<span class="mui-icon iconfont icon-sex-women"></span><br />
 					<span>ID:1234567</span><br />
 					<span>跟着我左手右手一个慢动作</span>
 				</div>
 			</div>
 			<ul class="mui-table-view mui-grid-view mui-grid-9">
 		        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="list.html">
-		            <span class="mui-icon mui-icon-person"></span>
+		            <span class="mui-icon iconfont icon-mobile-authentication icon-color-e7465c"></span>
 		            <div class="mui-media-body">手机验证</div>
 		        </a></li>
 		        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
-		            <span class="mui-icon mui-icon-person">
+		            <span class="mui-icon iconfont icon-real-name-authentication icon-color-2c80e5">
 		            	<!--<span class="mui-badge"></span>-->
 		            </span>
 		            <div class="mui-media-body">实名验证</div>
 		        </a></li>
 		        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
-		            <span class="mui-icon mui-icon-person"></span>
+		            <span class="mui-icon iconfont icon-my-intention icon-color-07a098"></span>
 		            <div class="mui-media-body">我的意向</div>
 		        </a></li>
 		   	</ul>
@@ -74,29 +104,29 @@
 		<div class="mui-content" style="margin-top: -5pt;">
 			<ul class="mui-table-view">
 				<li class="mui-table-view-cell" style="padding: 21px 15px;">
-					<span class="mui-icon mui-icon-person"></span>
-						我的标签
-					<span class="mui-icon mui-icon-person mui-pull-right"></span>
+					<span class="mui-icon iconfont font-size24 icon-flag icon-color-ffc32d"></span>
+					<font class="font-size15">我的标签</font>
+					<span class="mui-icon iconfont font-size24 icon-right-arrow mui-pull-right"></span>
 				</li>
 				<li class="mui-table-view-cell" style="padding: 21px 15px;">
-					<span class="mui-icon mui-icon-person"></span>
-						联系地址
-					<span class="mui-icon mui-icon-person mui-pull-right"></span>
+					<span class="mui-icon iconfont font-size24 icon-location icon-color-2c80e5"></span>
+					<font class="font-size15">联系地址</font>
+					<span class="mui-icon iconfont font-size24 icon-right-arrow mui-pull-right"></span>
 				</li>
 				<li class="mui-table-view-cell" style="padding: 21px 15px;">
-					<span class="mui-icon mui-icon-person"></span>
-						QQ
-					<span class="mui-icon mui-icon-person mui-pull-right"></span>
+					<span class="mui-icon iconfont font-size24 icon-QQ icon-color-e7465c"></span>
+					<font class="font-size15">QQ</font>
+					<span class="mui-icon iconfont font-size24 icon-right-arrow mui-pull-right"></span>
 				</li>
 				<li class="mui-table-view-cell" style="padding: 21px 15px;">
-					<span class="mui-icon mui-icon-person"></span>
-						微信
-					<span class="mui-icon mui-icon-person mui-pull-right"></span>
+					<span class="mui-icon iconfont font-size24 icon-wechat icon-color-82d842"></span>
+					<font class="font-size15">微信</font>
+					<span class="mui-icon iconfont font-size24 icon-right-arrow mui-pull-right"></span>
 				</li>
 				<li class="mui-table-view-cell" style="padding: 21px 15px;">
-					<span class="mui-icon mui-icon-person"></span>
-						紧急联系人
-					<span class="mui-icon mui-icon-person mui-pull-right"></span>
+					<span class="mui-icon iconfont font-size24 icon-emergency-contact icon-color-2c80e5"></span>
+					<font class="font-size15">紧急联系人</font>
+					<span class="mui-icon iconfont font-size24 icon-right-arrow mui-pull-right"></span>
 				</li>
 			</ul>
 		</div>
