@@ -156,6 +156,32 @@
 					"html/user/userinfo.html"
 				],
 				"priority": 0
+			},
+			"html/login/login.html": {
+				"resources": [
+					"images/资源 1@2x.png"
+				],
+				"refer": [
+					"html/login/reg.html",
+					"html/login/loginByPassword.html"
+				],
+				"priority": 0
+			},
+			"html/login/reg.html": {
+				"resources": [
+					"images/资源 1@2x.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/login/loginByPassword.html": {
+				"resources": [
+					"images/资源 1@2x.png"
+				],
+				"refer": [
+					"html/login/reg.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -180,7 +206,6 @@
 				"css/style.css",
 				"js/mui.enterfocus.js",
 				"html/login/forget_password.html",
-				"html/login/reg.html",
 				"html/login/unlock.html",
 				"css/mui.min.css",
 				"js/mui.locker.js",

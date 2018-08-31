@@ -17,7 +17,7 @@
 				</div>
 			</div>
 			<div class="mui-row" style="text-align: center;margin-top: 9vh;">
-				<img width="25%" height="25%" src="../../images/资源 1@2x.png"/>
+				<img width="25%" height="25%" src="../../images/logo_2X.png"/>
 			</div>
 			<div class="mui-row" style="margin-top: 15vh;border-bottom: 1px solid #EEEEEE;">
 				<div class="mui-col-xs-1 mui-col-sm-1">
@@ -86,6 +86,7 @@
 					statusBarBackground: '#f7f7f7'
 				});
 				$.plusReady(function() {
+					console.log("当前页面URL："+plus.webview.currentWebview().getURL());
 					plus.screen.lockOrientation("portrait-primary");
 					var mainPage = plus.webview.getWebviewById("main");
 					var main_loaded_flag = false;
@@ -135,6 +136,7 @@
 					var passwordLoginButton = doc.getElementById('passwordLogin');
 					
 					loginButton.addEventListener('tap', function(event) {
+						console.log("111");
 						let accountReg = /^1(\d{10})$/;
 						let passwordReg = /^\w{6,18}$/;
 						if(!accountReg.test(accountBox.value)){
