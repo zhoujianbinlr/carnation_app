@@ -8,10 +8,50 @@
 		<link rel="stylesheet" type="text/css" href="../../css/homepage/homepage.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../libs/mySlider/mySlider.css"/>
 	</head>
 
 	<body>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../libs/mySlider/mySlider.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../libs/template-web.js" type="text/javascript" charset="utf-8"></script>
+		<script id='template2' type="text/html">
+			<ul class="mui-table-view">
+				<% for (let item of newsList) {%>
+					<li class="mui-table-view-cell mui-media">
+	    			        <a href="javascript:;">
+	    			            <img class="mui-media-object mui-pull-left" src=<%=item.src%>>
+	    			            <div class="mui-media-body">
+	    			                <%=item.title%>
+	    			                <p class="mui-ellipsis"><%=item.content%></p>
+	    			            </div>
+	    			        </a>
+	    			    </li>
+				<%}%>
+			</ul>
+		</script>
+		<script id='template1' type="text/html">
+			<% for(let item of tabList) {%>
+				<div class="mui-row routine-tab" style="background-color:<%=item.bgColor%>;">
+					<div class="right-circle" style="background-color: <%=item.circleColor%>;"></div>
+					<div class="left-circle" style="background-color: <%=item.circleColor%>;"></div>
+					<div class="middle-circle" style="background-color: <%=item.circleColor%>;"></div>
+					<div class="mui-col-sm-6 mui-col-xs-6">
+						<div class="routine-img">
+							<img style="width:100%;height: 100%;" src=<%=item.src%>>
+						</div>
+					</div>
+					<div class="mui-col-sm-1 mui-col-xs-1"></div>
+					<div class="mui-col-sm-5 mui-col-xs-5" style="color: <%=item.fontColor%>;height: 90px;">
+						<div class="mui-row" style="height: 50px;line-height: 25px;margin-top: 20px;">
+							<%=item.title%>
+							<p  style="color: <%=item.fontColor%>"><%=item.content%></p>
+						</div>
+					</div>
+					
+				</div>
+			<%}%>
+		</script>
 		<script type="text/javascript">
 			mui.init()
 		</script>
@@ -38,53 +78,10 @@
 					</div>
 				</div>
 			</div>
-		    <div id="slider" class="mui-slider" >
-		      <div class="mui-slider-group mui-slider-loop">
-		        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
-		        <div class="mui-slider-item mui-slider-item-duplicate">
-		          <a href="#">
-		            <img src="http://placehold.it/400x300">
-		          </a>
-		        </div>
-		        <!-- 第一张 -->
-		        <div class="mui-slider-item">
-		          <a href="#">
-		            <img src="http://placehold.it/400x300">
-		          </a>
-		        </div>
-		        <!-- 第二张 -->
-		        <div class="mui-slider-item">
-		          <a href="#">
-		            <img src="http://placehold.it/400x300">
-		          </a>
-		        </div>
-		        <!-- 第三张 -->
-		        <div class="mui-slider-item">
-		          <a href="#">
-		            <img src="http://placehold.it/400x300">
-		          </a>
-		        </div>
-		        <!-- 第四张 -->
-		        <div class="mui-slider-item">
-		          <a href="#">
-		            <img src="http://placehold.it/400x300">
-		          </a>
-		        </div>
-		        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
-		        <div class="mui-slider-item mui-slider-item-duplicate">
-		          <a href="#">
-		            <img src="http://placehold.it/400x300">
-		          </a>
-		        </div>
-		      </div>
-		      <div class="mui-slider-indicator">
-		        <div class="mui-indicator mui-active"></div>
-		        <div class="mui-indicator"></div>
-		        <div class="mui-indicator"></div>
-		        <div class="mui-indicator"></div>
-		      </div>
-		    </div>
-		    <div class="mui-row" style="margin-top: 15px;border-radius: 3px;box-shadow: 0 0 5px #DDDDDD;color: #333333;padding: 10px 0;">
+			<div class="mui-row">
+				<div id='mySlider-container' class="mySlider-container"></div>	
+			</div>
+		    <div class="mui-row" style="border-radius: 3px;box-shadow: 0 0 5px #DDDDDD;color: #333333;padding: 10px 0;">
 		    		<div class="mui-col-sm-3 mui-col-xs-3">
 		    			<div class="mui-row" style="text-align: center;height: 40px;line-height: 40px;">
 		    				<i style="font-size: 2em;color: #FFC32D;" class="iconfont icon-record"></i>
@@ -120,84 +117,23 @@
 		    </div>
 		    <div class="mui-row" style="margin-top: 15px;border-radius: 5px;box-shadow: 0 0 5px #DDDDDD;color: #333333;">
 		    		<div class="mui-col-sm-6 mui-col-xs-6" style="border-right: 1px solid #D8D8D8;border-bottom:  1px solid #D8D8D8;">
-		    			<div class="mui-row zyf-active-tab" style="height: 50px;line-height: 50px;font-size: 1.2em; text-align: center;">
+		    			<div id='routines' class="mui-row zyf-active-tab" style="height: 50px;line-height: 50px;font-size: 1.2em; text-align: center;">
 		    				今日事项
 		    			</div>
 		    		</div>
 		    		<div class="mui-col-sm-6 mui-col-xs-6" style="border-bottom:  1px solid #D8D8D8;">
-		    			<div class="mui-row" style="height: 50px;line-height: 50px;font-size: 1.2em;text-align: center;">
+		    			<div id='dailyNews' class="mui-row" style="height: 50px;line-height: 50px;font-size: 1.2em;text-align: center;">
 		    				每日资讯
 		    			</div>
 		    		</div>
 		    		<div id='container' class="mui-col-sm-12 mui-col-xs-12">
-		    			<ul class="mui-table-view">
-		    			    <li class="mui-table-view-cell mui-media">
-		    			        <a href="javascript:;">
-		    			            <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
-		    			            <div class="mui-media-body">
-		    			                幸福
-		    			                <p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
-		    			            </div>
-		    			        </a>
-		    			    </li>
-		    			    <li class="mui-table-view-cell mui-media">
-		    			        <a href="javascript:;">
-		    			            <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
-		    			            <div class="mui-media-body">
-		    			                木屋
-		    			                <p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
-		    			            </div>
-		    			        </a>
-		    			    </li>
-		    			    <li class="mui-table-view-cell mui-media">
-		    			        <a href="javascript:;">
-		    			            <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
-		    			            <div class="mui-media-body">
-		    			                CBD
-		    			                <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
-		    			            </div>
-		    			        </a>
-		    			    </li>
-		    			    <li class="mui-table-view-cell mui-media">
-		    			        <a href="javascript:;">
-		    			            <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
-		    			            <div class="mui-media-body">
-		    			                CBD
-		    			                <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
-		    			            </div>
-		    			        </a>
-		    			    </li>
-		    			    <li class="mui-table-view-cell mui-media">
-		    			        <a href="javascript:;">
-		    			            <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
-		    			            <div class="mui-media-body">
-		    			                CBD
-		    			                <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
-		    			            </div>
-		    			        </a>
-		    			    </li>
-		    			    <li class="mui-table-view-cell mui-media">
-		    			        <a href="javascript:;">
-		    			            <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
-		    			            <div class="mui-media-body">
-		    			                CBD
-		    			                <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
-		    			            </div>
-		    			        </a>
-		    			    </li>
-		    			    <li class="mui-table-view-cell mui-media">
-		    			        <a href="javascript:;">
-		    			            <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
-		    			            <div class="mui-media-body">
-		    			                CBD
-		    			                <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
-		    			            </div>
-		    			        </a>
-		    			    </li>
-		    			</ul>
 		    		</div>
 		    </div>
 		</div>
+	<script src="../../js/homepage/homepage.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		updateRoutines();
+	</script>
 	</body>
 
 </html>

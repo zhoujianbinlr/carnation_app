@@ -1,48 +1,3 @@
-@keyframes leftmove
-{
-	from {left:2%;}
-	to {left:-102%;}
-}
-
-@keyframes rightmove
-{
-	from {right:2%;}
-	to {left:102%;}
-}
-
-@keyframes leftmagnify
-{
-	from {
-		width: 60%;
-		height: 60%;
-		top: 20%;
-		right: 2%;
-		z-index: 1;}
-	to {
-		width: 86%;
-		height: 86%;
-		top: 7%;
-		left: 7%;
-		z-index:2;}
-}
-
-@keyframes rightmagnify
-{
-	from {
-		width: 60%;
-		height: 60%;
-		top: 20%;
-		left: 2%;
-		z-index: 1;}
-	to {
-		width: 86%;
-		height: 86%;
-		top: 7%;
-		left: 7%;
-		z-index:2;}
-}
-
-
 
 .mySlider-container{
 	width: 100%;
@@ -53,12 +8,10 @@
 }
 
 .mySlider-slider{
-	background-color: rgba(0,0,0,0.5);
-	position: absolute;
-	left: 0px;
-	top: 5vw;
-	z-index: 3;
-	height: 50vw;
+	background-color: rgba(0,0,0,0);
+	position: relative;
+	z-index: 105;
+	height: 100%;
 	width: 100%;
 }
 
@@ -69,7 +22,7 @@
 	left: 2%;
 	border-radius: 5px;
 	position: absolute;
-	z-index: 2;
+	z-index: 102;
 	box-shadow: 0 0 5px #dddddd;
 }
 
@@ -77,8 +30,8 @@
 	width: 60%;
 	height: 60%;
 	top: 20%;
-	right: 2%;
-	z-index: 2;
+	left: 38%;
+	z-index: 102;
 	position: absolute;
 	border-radius: 5px;
 	box-shadow: 0 0 5px #BBBBBB;
@@ -89,7 +42,7 @@
 	height: 86%;
 	top: 7%;
 	left: 7%;
-	z-index:3;
+	z-index:103;
 	position: absolute;
 	border-radius: 5px;
 	box-shadow: 0 0 10px #BBBBBB;
@@ -99,21 +52,9 @@
 	width: 60%;
 	height: 60%;
 	top: 20%;
-	right: 2%;
+	left: 102%;
 	border-radius: 5px;
 	position: absolute;
-	z-index: 1;
-	box-shadow: 0 0 5px #dddddd;
-}
-
-.mySlider-img-left {
-	width: 60%;
-	height: 60%;
-	top: 20%;
-	left: 2%;
-	border-radius: 5px;
-	position: absolute;
-	z-index: 1;
 	box-shadow: 0 0 5px #dddddd;
 }
 
