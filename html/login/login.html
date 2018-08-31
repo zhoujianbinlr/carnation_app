@@ -22,7 +22,7 @@
 			<div class="mui-row" style="margin-top: 15vh;border-bottom: 1px solid #EEEEEE;">
 				<div class="mui-col-xs-1 mui-col-sm-1">
 					<div class="mui-row" style="color:#999999;float: left;height: 6vh;line-height: 6vh;">
-						<i style="float: left;font-size: 1em;margin-right: 1vw;" class="iconfont icon-people"></i>
+						<i style="float: left;font-size: 1.5em;margin-right: 1vw;" class="iconfont icon-login"></i>
 					</div>
 				</div>
 				<div class="mui-col-xs-6 mui-col-sm-6">
@@ -34,7 +34,7 @@
 			<div class="mui-row" style="margin-top: 2vh;">
 				<div class="mui-col-xs-1 mui-col-sm-1" style="border-bottom: 1px solid #EEEEEE;">
 					<div class="mui-row" style="color:#999999;float: left;height: 6vh;line-height: 6vh;">
-						<i style="float: left;font-size: 1em;margin-right: 1vw;" class="iconfont icon-lock"></i>	
+						<i style="float: left;font-size: 1.5em;margin-right: 1vw;" class="iconfont icon-password"></i>	
 					</div>
 				</div>
 				<div class="mui-col-xs-6 mui-col-sm-6" style="border-bottom: 1px solid #EEEEEE;">
@@ -140,11 +140,11 @@
 						let accountReg = /^1(\d{10})$/;
 						let passwordReg = /^\w{6,18}$/;
 						if(!accountReg.test(accountBox.value)){
-							plus.nativeUI.toast('手机号码填写不正确',{duration:'long'});
+							mui.toast('手机号码填写不正确',{duration:'long'});
 							return;
 						}
 						if(!passwordReg.test(passwordBox.value)){
-							plus.nativeUI.toast('密码应以字母开头，长度在6-18之间，只能包含字母、数字和下划线',{duration:'long'});
+							mui.toast('密码应以字母开头，长度在6-18之间，只能包含字母、数字和下划线',{duration:'long'});
 							return;
 						}
 						
@@ -223,6 +223,9 @@
 				});
 			}(mui, document));
 			
+			function testreg(){
+				window.location.href='reg.html'
+			}
 		</script>
 	</body>
 
