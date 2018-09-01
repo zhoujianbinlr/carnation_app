@@ -11,7 +11,7 @@ document.getElementById('dailyNews').addEventListener('tap',function(){
 	
 });
 
-let data = [
+/*let data = [
 	'http://img1.gamersky.com/image2016/02/20160222_gxh_289_9/image096_S.jpg',
 	'http://img1.gamersky.com/image2016/02/20160222_gxh_289_9/image001_S.jpg',
 	'http://upload.anqu.com/20160226/1456468514740519.jpg',
@@ -19,6 +19,13 @@ let data = [
 	'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535625716094&di=b937bab2eff4429152770877d6dbdc1b&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F13%2F19%2F83%2F51J58PIC8be_1024.jpg',
 	'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535625716094&di=0aead7502b1e7caf9dd05611859c626d&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201512%2F06%2F20151206213804_snrPw.jpeg',
 	'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535625716093&di=f5b87993f022637f745075dc53b969c6&imgtype=0&src=http%3A%2F%2Fi10.topitme.com%2Fo080%2F100805058240349bb9.jpg'
+	];
+mySlider.initSlider(data,true);*/
+
+let data = [
+	'../../images/Slider1.jpg',
+	'../../images/Slider2.jpg',
+	'../../images/Slider3.jpg'
 	];
 mySlider.initSlider(data,true);
 
