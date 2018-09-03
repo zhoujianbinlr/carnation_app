@@ -74,7 +74,7 @@
 				<div class="imgDiv">
 					<img src="../../images/qq.png" />
 				</div>
-				<div class="mui-row mui-pull-right editDiv">
+				<div id="userEdit" class="mui-row mui-pull-right editDiv">
 					编辑
 					<!--<span class="mui-icon iconfont icon-edit"></span>-->
 				</div>
@@ -103,7 +103,7 @@
 		</div>
 		<div class="mui-content" style="margin-top: -5pt;">
 			<ul class="mui-table-view">
-				<li class="mui-table-view-cell" style="padding: 21px 15px;">
+				<li id="myFlag" class="mui-table-view-cell" style="padding: 21px 15px;">
 					<span class="mui-icon iconfont font-size24 icon-flag icon-color-ffc32d"></span>
 					<font class="font-size15">我的标签</font>
 					<span class="mui-icon iconfont font-size24 icon-right-arrow mui-pull-right"></span>
@@ -131,9 +131,26 @@
 			</ul>
 		</div>
 		
+		
+		
 		<script src="../../js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			(function($,doc){
+				$.init({
+					statusBarBackground: '#f7f7f7'
+				});
+				mui.plusReady(function(){
+					var userEdit = doc.getElementById('userEdit');
+					console.log("当前页面URL："+plus.webview.currentWebview().getURL());
+					userEdit.addEventListener("tap",function(){
+						console.log("111111111111111");
+						mui.openWindow({
+					    	url: '../user/userEdit.html', 
+					    	id:'info'
+					  	});
+					})
+				})
+			}(mui, document));
 		</script>
 	</body>
 

@@ -1,48 +1,53 @@
 {
-  "index.html": {
-    "refer": [
-      "html/main.html",
-      "html/login/login.html"
-    ],
-    "resources": []
-  },
-  "html/main.html": {
-    "resources": [
-      "html/homepage/homepage.html"
-    ],
-    "refer": [
-      "html/ART/artHomepage.html",
-      "html/homepage/homepage.html",
-      "html/inform/inform.html",
-      "html/user/userinfo.html"
-    ]
-  },
-  "html/login/login.html": {
-    "resources": [
-      "images/D˝ 1@2x.png",
-      "images/D˝ 1@2x.png",
-      "images/Dê 1@2x.png"
-    ],
-    "refer": [
-      "html/login/reg.html",
-      "html/login/loginByPassword.html"
-    ]
-  },
-  "html/login/reg.html": {
-    "resources": [
-      "images/D˝ 1@2x.png",
-      "images/D˝ 1@2x.png",
-      "images/Dê 1@2x.png"
-    ],
-    "refer": []
-  },
-  "html/login/loginByPassword.html": {
-    "resources": [
-      "images/D˝ 1@2x.png",
-      "images/D˝ 1@2x.png"
-    ],
-    "refer": [
-      "html/login/reg.html"
-    ]
-  }
+	"index.html": {
+		"refer": [
+			"html/main.html",
+			"html/login/login.html"
+		],
+		"resources": []
+	},
+	"html/main.html": {
+		"resources": [
+			"html/homepage/homepage.html"
+		],
+		"refer": [
+			"html/ART/artHomepage.html",
+			"html/homepage/homepage.html",
+			"html/inform/inform.html",
+			"html/user/userinfo.html"
+		]
+	},
+	"html/login/login.html": {
+		"resources": [
+			"images/DÔøΩ 1@2x.png",
+			"images/DÔøΩ 1@2x.png",
+			"images/DÔøΩ 1@2x.png"
+		],
+		"refer": [
+			"html/login/reg.html",
+			"html/login/loginByPassword.html"
+		]
+	},
+	"html/login/reg.html": {
+		"resources": [
+			"images/DÔøΩ 1@2x.png",
+			"images/DÔøΩ 1@2x.png",
+			"images/DÔøΩ 1@2x.png"
+		],
+		"refer": []
+	},
+	"html/login/loginByPassword.html": {
+		"resources": [
+			"images/DÔøΩ 1@2x.png",
+			"images/DÔøΩ 1@2x.png"
+		],
+		"refer": [
+			"html/login/reg.html"
+		]
+	},
+	"html/user/userinfo.html": {
+		"refer": [
+			"html/user/userEdit.html"
+		]
+	}
 }

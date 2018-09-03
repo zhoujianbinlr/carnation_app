@@ -182,6 +182,13 @@
 					"html/login/reg.html"
 				],
 				"priority": 0
+			},
+			"html/user/userinfo.html": {
+				"resources": [],
+				"refer": [
+					"html/user/userEdit.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
