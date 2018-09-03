@@ -9,6 +9,18 @@
 		<link rel="stylesheet" type="text/css" href="../../libs/mySlider/mySlider.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/ART/artHomepage.css"/>
 	</head>
+	
+	<style type="text/css">
+		.mui-table-view-cell{
+			background-color: white !important;
+			padding-top: 0px !important;
+			padding-bottom: 0px !important;
+		} 
+		.mui-grid-view {
+			background-color: white !important;
+			border-bottom: #EEEEEE 5px solid;
+		}
+	</style>
 
 	<body>
 		<script src="../../js/mui.min.js"></script>
@@ -19,7 +31,7 @@
 		<div class="mui-content">
 			<div class="mui-row myHeader">
 				<div class="mui-row" style="text-align: center;height: 5vh;line-height: 5vh;">
-					<p style="font-size: 1.2em;">历程</p>
+					<div style="font-size: 1.2em;color: white;">历程</div>
 				</div>
 				<div class="mui-row" >
 					<div class="mui-col-sm-3 mui-col-xs-3">
@@ -27,17 +39,54 @@
 							<img src="../../images/logo_2X.png"/ style="width: 9vh;height: 9vh;border-radius: 9vh;margin-top: 3vh;">
 						</div>
 					</div>
-					<div class="mui-col-sm-3 mui-col-xs-3" style="height: 15vh;line-height: 15vh;">
-						<div class="mui-row" style="height: 6vh;line-height: 3vh;">
-							<p>谭某某</p>
-							<p style="font-size: 0.9em;">主治医师</p>
+					<div class="mui-col-sm-3 mui-col-xs-3" style="height: 15vh;">
+						<div class="mui-row" style="margin-top:4.5vh;height: 6vh;line-height: 3vh;color: white;">
+							<div >谭某某</div>
+							<div style="font-size: 0.6em;">主治医师</div>
 						</div>
 					</div>
-					<div class="mui-col-sm-6 mui-col-xs-6">
-						
+					<div class="mui-col-sm-5 mui-col-xs-5">
+						<div class="mui-row" style="height: 15vh;line-height: 15vh;color: white;">
+							<div style="font-size: 0.7em;float:right">
+								中山大学第三附属医院
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+				    <a href="#">
+				        <span style="color: #FFC32D;" class="mui-icon mui-icon-home"></span>
+				        <div class="mui-media-body">基本信息</div>
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+				    <a href="#">
+				        <span style="color: #E7465C;" class="mui-icon mui-icon-email"></span>
+				        <div class="mui-media-body">病史</div>
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+				    <a href="#">
+				        <span style="color: #07A098;" class="mui-icon mui-icon-chatbubble"></span>
+				        <div class="mui-media-body">用药</div>
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+				    <a href="#">
+				        <span style="color: #338FFF;" class="mui-icon mui-icon-location"></span>
+				        <div class="mui-media-body">咨询</div>
+				    </a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+				    <a href="#">
+				        <span style="color: #82D842" class="mui-icon mui-icon-search"></span>
+				        <div class="mui-media-body">随访</div>
+				    </a>
+				</li>
+		    </ul>
+			
 		</div>
 		
 	</body>
