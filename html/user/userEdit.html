@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css"/>
+		<style>
+			body{
+				font-family: 'FZLTHK--GBK1-0';
+			}
+			.custom-userEdit-img{
+				text-align: left;height: 80pt; line-height: 80pt; border-bottom: 1px solid #EEEEEE;
+			}
+			.imgDiv{
+				background-color: white;overflow: hidden;width: 60pt;height: 60pt; margin: 10pt 5pt 10pt auto;border-radius:50%;float: right;
+			}
+			.imgDiv img{
+				width: 60pt;height: 60pt;
+			}
+			.custom-userEdit-text{
+				text-align: left;height: 50pt; line-height: 50pt; border-bottom: 1px solid #EEEEEE;font-family: 'FZLTHK--GBK1-0';
+			}
+			.edit-div-left16{
+				 margin-left: 16px;
+			}
+			.edit-div-right20{
+				 margin-right: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">编辑</h1>
+		</header>
+		<div class="mui-content" style="padding: 40px 0vw 0 0vw;">
+			<div class="mui-row custom-userEdit-img">
+				<div class="mui-pull-left edit-div-left16">
+					头像
+				</div>
+				<div class="imgDiv edit-div-right20">
+					<img src="../../images/qq.png" />
+				</div>
+			</div>
+			<div class="mui-row custom-userEdit-text">
+				<div class="mui-pull-left edit-div-left16">
+					帐号
+				</div>
+				<div class="mui-pull-right edit-div-right20">
+					123456
+				</div>
+			</div>
+			<div class="mui-row custom-userEdit-text">
+				<div class="mui-pull-left edit-div-left16">
+					昵称
+				</div>
+				<div class="mui-pull-right edit-div-right20">
+					fdsafdsf
+				</div>
+			</div>
+			<div class="mui-row custom-userEdit-text">
+				<div class="mui-pull-left edit-div-left16">
+					签名
+				</div>
+				<div class="mui-pull-right edit-div-right20">
+					fdsafdsf
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			(function($,doc){
+				$.init({
+					statusBarBackground: '#f7f7f7'
+				});
+				mui.plusReady(function(){
+					var myFlag = doc.getElementById('myFlag');
+					console.log("当前页面URL："+plus.webview.currentWebview().getURL());
+					myFlag.addEventListener("tap",function(){
+						console.log("111111111111111");
+						mui.openWindow({
+					    	url: '../login/login.html', 
+					    	id:'info'
+					  	});
+					})
+				})
+			}(mui, document));
+		</script>
+	</body>
+
+</html>
